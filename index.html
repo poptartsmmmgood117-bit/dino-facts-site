@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dino Facts</title>
+  <meta name="description" content="Roar-some facts about dinosaurs and the prehistoric world." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦖</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <a class="brand" href="index.html">🦖 Dino Facts</a>
+    <div class="links">
+      <a href="index.html" class="active">Dinos</a>
+      <a href="vikings.html">Vikings</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="floaters" aria-hidden="true"></div>
+    <div>
+      <div class="big-emoji" aria-hidden="true">🦖</div>
+      <h1>DINO FACTS</h1>
+      <p class="tagline">165 million years of giants, weirdos, and feathered terrors. Meet <span id="item-count">24</span> of the coolest creatures to ever stomp the Earth.</p>
+      <div class="ctas">
+        <a class="btn" href="#dinos">Meet the dinos</a>
+        <a class="btn ghost" href="#quiz-section">Take the quiz</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="alt">
+    <div class="wrap reveal">
+      <h2 class="section-title">⚡ Random Fact Generator</h2>
+      <p class="section-sub">Hit the button for a new fact. Some of them will surprise you.</p>
+      <div class="fact-box">
+        <p id="fact-text" aria-live="polite"></p>
+        <button class="btn" id="fact-btn">🦴 Give me another!</button>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap reveal">
+      <div class="stats">
+        <div class="stat"><div class="num">1,500+</div><div class="lbl">named dinosaur species</div></div>
+        <div class="stat"><div class="num">165M</div><div class="lbl">years dinos ruled</div></div>
+        <div class="stat"><div class="num">~35 m</div><div class="lbl">longest dino (nose to tail)</div></div>
+        <div class="stat"><div class="num">10,000+</div><div class="lbl">living dino species (birds!)</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="dinos">
+    <div class="wrap">
+      <h2 class="section-title">🦕 The Dino Lineup</h2>
+      <p class="section-sub">Search, filter by era or diet, and tap any card for extra facts. The bar shows length compared to the biggest dino here.</p>
+      <div class="controls" id="controls">
+        <input id="search" type="search" placeholder="Search dinos…" aria-label="Search dinosaurs" />
+      </div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2 class="section-title">🕰️ Journey Through Deep Time</h2>
+      <p class="section-sub">The age of dinosaurs is split into three periods together called the Mesozoic Era.</p>
+      <div class="timeline">
+        <div class="tl-item reveal"><h3>Triassic</h3><div class="when">252 – 201 million years ago</div><p>Life recovers from the worst mass extinction ever. The first dinosaurs appear around 230 million years ago, and most of them are small, speedy two-legged hunters. All land is joined in one supercontinent, Pangaea.</p></div>
+        <div class="tl-item reveal"><h3>Jurassic</h3><div class="when">201 – 145 million years ago</div><p>Pangaea starts splitting up. Giant long-necked sauropods like Brachiosaurus and Diplodocus spread everywhere, Stegosaurus and Allosaurus appear, and the first bird, Archaeopteryx, takes off.</p></div>
+        <div class="tl-item reveal"><h3>Cretaceous</h3><div class="when">145 – 66 million years ago</div><p>The heyday of dinosaurs: T. rex, Triceratops, Velociraptor, Spinosaurus, and armored ankylosaurs. Flowering plants appear and bees arrive along with them.</p></div>
+        <div class="tl-item reveal"><h3>💥 The Impact</h3><div class="when">66 million years ago</div><p>An asteroid roughly 10 km wide slams into what is now Chicxulub, Mexico. About three quarters of all species are wiped out, including every non-bird dinosaur.</p></div>
+        <div class="tl-item reveal"><h3>🐦 Today</h3><div class="when">Right now</div><p>Dinosaurs never fully left. Birds are living theropod dinosaurs, which makes the chicken in your sandwich a distant cousin of T. rex.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <h2 class="section-title">🙅 Myth vs. Fact</h2>
+      <p class="section-sub">Movies got a lot of things wrong. Here's what scientists actually think.</p>
+      <div class="myths">
+        <div class="myth reveal"><div class="label m">Myth</div><p>Velociraptors were human-sized.</p><div class="label f">Fact</div><p>Real Velociraptor was about the size of a turkey and covered in feathers. The movie "raptors" are closer to Deinonychus.</p></div>
+        <div class="myth reveal"><div class="label m">Myth</div><p>Pterodactyls and plesiosaurs were dinosaurs.</p><div class="label f">Fact</div><p>Flying pterosaurs and swimming plesiosaurs and mosasaurs were reptile cousins of dinosaurs, not dinosaurs themselves.</p></div>
+        <div class="myth reveal"><div class="label m">Myth</div><p>Dinosaurs and humans lived together.</p><div class="label f">Fact</div><p>The last non-bird dinosaurs died about 66 million years before the first humans showed up.</p></div>
+        <div class="myth reveal"><div class="label m">Myth</div><p>T. rex could only see you if you moved.</p><div class="label f">Fact</div><p>T. rex had forward-facing eyes and probably better depth perception than a hawk. Standing still wouldn't save you.</p></div>
+        <div class="myth reveal"><div class="label m">Myth</div><p>Dinosaurs were all slow, scaly, and dumb.</p><div class="label f">Fact</div><p>Many were active, warm-blooded, feathered, and clever. Troodon had one of the biggest brains for its body size.</p></div>
+        <div class="myth reveal"><div class="label m">Myth</div><p>Dinosaurs are completely extinct.</p><div class="label f">Fact</div><p>Birds are dinosaurs. There are more living dinosaur species today than there are species of mammals.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="quiz-section">
+    <div class="wrap">
+      <h2 class="section-title">🧠 Dino Quiz</h2>
+      <p class="section-sub">How much do you really know? Test yourself.</p>
+      <div class="quiz reveal" id="quiz"></div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="promo reveal">
+      <div>
+        <h3>⚔️ Ready for a different kind of giant?</h3>
+        <p>Trade claws for longships. Check out our brand-new Viking Facts page: raiders, explorers, gods, and runes.</p>
+      </div>
+      <a class="btn" href="vikings.html">Sail to Vikings →</a>
+    </div>
+  </section>
+
+  <footer>Made with 🦴 and a lot of roaring · <a href="vikings.html">Viking Facts</a></footer>
+
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Dinosaur details">
+    <div class="panel">
+      <button class="close" aria-label="Close">✕</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script>
+    window.PAGE = {
+      floaters: ["🦖", "🦕", "🦴", "🥚", "🌋", "🌿"],
+      emptyText: "No dinos found. Maybe they went extinct? 🦴",
+      sizeLabel: (d) => `Length: ~${d.size} m`,
+      filterGroups: [
+        { name: "Eras", values: ["Triassic", "Jurassic", "Cretaceous"] },
+        { name: "Diets", values: ["Carnivore", "Herbivore", "Omnivore", "Piscivore"] },
+      ],
+      facts: [
+        "Birds are living dinosaurs. A pigeon is more closely related to T. rex than T. rex is to Stegosaurus.",
+        "Stegosaurus lived about 80 million years before T. rex. T. rex lived closer in time to us than to Stegosaurus!",
+        "The biggest dinosaur eggs were about the size of a football. Even giant sauropods started out small.",
+        "Some sauropods may have weighed as much as 10 elephants.",
+        "T. rex had the strongest bite of any land animal known, strong enough to crush bone.",
+        "Dinosaur fossils have been found on every continent, including Antarctica.",
+        "The word 'dinosaur' means 'terrible lizard'. It was coined by Richard Owen in 1842.",
+        "Scientists have found dinosaur feathers trapped in amber, still showing tiny details.",
+        "Some dinosaurs swallowed stones (gastroliths) to help grind up food in their stomachs.",
+        "Sue, the most complete T. rex ever found, is named after fossil hunter Sue Hendrickson.",
+        "A Psittacosaurus fossil preserved its skin colors: dark on top, pale underneath for camouflage.",
+        "Dinosaur poop fossils are called coprolites, and some are bigger than a loaf of bread.",
+        "The longest dinosaur names include Micropachycephalosaurus, which ironically was tiny.",
+        "Ankylosaurus' tail club could swing hard enough to break bones.",
+        "Some hadrosaurs had up to 1,000 teeth packed in rows that constantly replaced themselves.",
+        "Baby sauropods may have run on two legs before switching to four as they grew.",
+        "Most dinosaurs were smaller than a human. The giants get all the attention!",
+      ],
+      items: [
+        { name: "Tyrannosaurus rex", icon: "🦖", meaning: "Tyrant lizard king", tags: ["Cretaceous", "Carnivore"], size: 12.3,
+          fact: "One of the largest land predators ever, with teeth up to 30 cm long including the root.",
+          stats: "68–66 million years ago · North America · ~8 tonnes",
+          extra: ["Its tiny arms could still curl around 200 kg each.", "It may have lived 28+ years.", "Juveniles were lanky and fast; adults were bone-crushing tanks."] },
+        { name: "Triceratops", icon: "🦏", meaning: "Three-horned face", tags: ["Cretaceous", "Herbivore"], size: 9,
+          fact: "Its skull was one of the largest of any land animal, up to a third of its body length.",
+          stats: "68–66 million years ago · North America · ~6–12 tonnes",
+          extra: ["Fossils show T. rex bite marks on Triceratops frills.", "Its frill may have been for display as much as defense.", "It had up to 800 teeth for slicing tough plants."] },
+        { name: "Velociraptor", icon: "🦃", meaning: "Swift thief", tags: ["Cretaceous", "Carnivore"], size: 2,
+          fact: "Turkey-sized and feathered, nothing like the movie version.",
+          stats: "75–71 million years ago · Mongolia · ~15 kg",
+          extra: ["Quill knobs on its arm bones prove it had feathers.", "One famous fossil shows a Velociraptor locked in battle with a Protoceratops.", "Its big toe claw was about 6.5 cm long."] },
+        { name: "Brachiosaurus", icon: "🦒", meaning: "Arm lizard", tags: ["Jurassic", "Herbivore"], size: 22,
+          fact: "Its front legs were longer than its back legs, giving it a giraffe-like posture.",
+          stats: "154–153 million years ago · North America · ~30–50 tonnes",
+          extra: ["It could reach leaves about 9 m up, as tall as a three-story building.", "It may have eaten hundreds of kilograms of plants a day.", "Its nostrils sat on a bump on top of its head."] },
+        { name: "Stegosaurus", icon: "🛡️", meaning: "Roofed lizard", tags: ["Jurassic", "Herbivore"], size: 9,
+          fact: "Its brain was about the size of a walnut, but its spiky tail (the 'thagomizer') was deadly.",
+          stats: "155–150 million years ago · North America & Portugal · ~5 tonnes",
+          extra: ["An Allosaurus bone has been found with a Stegosaurus spike wound.", "Its back plates were probably for display and temperature control.", "The word 'thagomizer' came from a Far Side cartoon!"] },
+        { name: "Spinosaurus", icon: "🐊", meaning: "Spine lizard", tags: ["Cretaceous", "Piscivore"], size: 15,
+          fact: "Possibly the longest meat-eating dinosaur, with a huge sail on its back and a crocodile-like snout.",
+          stats: "99–93 million years ago · North Africa · ~7 tonnes",
+          extra: ["It had a paddle-like tail and probably hunted in rivers.", "The original fossils were destroyed in a WWII bombing raid in 1944.", "It ate giant fish like sawfish and coelacanths."] },
+        { name: "Ankylosaurus", icon: "🐢", meaning: "Fused lizard", tags: ["Cretaceous", "Herbivore"], size: 8,
+          fact: "A living tank covered in bony plates, swinging a massive club at the end of its tail.",
+          stats: "68–66 million years ago · North America · ~5–8 tonnes",
+          extra: ["Even its eyelids had armor.", "It was a neighbor of T. rex and Triceratops.", "It had small leaf-shaped teeth for munching plants."] },
+        { name: "Argentinosaurus", icon: "🏔️", meaning: "Argentina lizard", tags: ["Cretaceous", "Herbivore"], size: 35,
+          fact: "One of the heaviest land animals ever, possibly weighing as much as 10+ elephants.",
+          stats: "97–94 million years ago · South America · ~70–100 tonnes",
+          extra: ["A single vertebra was taller than an adult human.", "It hatched from an egg about the size of a coconut.", "It took maybe 15+ years to reach full size."] },
+        { name: "Diplodocus", icon: "🦕", meaning: "Double beam", tags: ["Jurassic", "Herbivore"], size: 26,
+          fact: "Its whip-like tail may have cracked faster than the speed of sound.",
+          stats: "154–152 million years ago · North America · ~15 tonnes",
+          extra: ["Its neck had 15 vertebrae and its tail about 80.", "Its peg-like teeth were replaced every month or so.", "Copies of 'Dippy' the Diplodocus skeleton are in museums worldwide."] },
+        { name: "Allosaurus", icon: "🐉", meaning: "Different lizard", tags: ["Jurassic", "Carnivore"], size: 9.5,
+          fact: "The top predator of the Jurassic, ruling about 80 million years before T. rex.",
+          stats: "155–145 million years ago · North America & Portugal · ~2 tonnes",
+          extra: ["It may have used its upper jaw like a hatchet.", "'Big Al' is a famous skeleton with many healed injuries.", "It had little horns above its eyes."] },
+        { name: "Pachycephalosaurus", icon: "🪖", meaning: "Thick-headed lizard", tags: ["Cretaceous", "Herbivore"], size: 4.5,
+          fact: "Its domed skull was up to 25 cm thick, solid bone.",
+          stats: "70–66 million years ago · North America · ~450 kg",
+          extra: ["Scientists still debate whether they head-butted each other.", "Its dome was surrounded by bony knobs and spikes.", "It may have eaten fruits and seeds as well as leaves."] },
+        { name: "Parasaurolophus", icon: "🎺", meaning: "Near crested lizard", tags: ["Cretaceous", "Herbivore"], size: 9.5,
+          fact: "Its long hollow head crest worked like a trombone to make deep, booming calls.",
+          stats: "76–73 million years ago · North America · ~2.5 tonnes",
+          extra: ["Scientists have recreated its sound using computer models.", "The crest could be over 1 m long.", "It could walk on two legs or on all fours."] },
+        { name: "Iguanodon", icon: "👍", meaning: "Iguana tooth", tags: ["Cretaceous", "Herbivore"], size: 10,
+          fact: "Famous for its spiky thumbs, which were first mistaken for a horn on its nose.",
+          stats: "126–122 million years ago · Europe · ~3 tonnes",
+          extra: ["It was only the second dinosaur ever named (1825).", "A dinner party was once held inside a life-size Iguanodon model in 1853.", "38 skeletons were found together in a Belgian coal mine."] },
+        { name: "Archaeopteryx", icon: "🪶", meaning: "Ancient wing", tags: ["Jurassic", "Carnivore"], size: 0.5,
+          fact: "Half bird, half dinosaur: it had feathers and wings, but also teeth and a bony tail.",
+          stats: "150 million years ago · Germany · ~1 kg",
+          extra: ["It was discovered in 1861, just two years after Darwin's 'On the Origin of Species'.", "It was about the size of a raven.", "It probably could flap and glide short distances."] },
+        { name: "Microraptor", icon: "🦅", meaning: "Small thief", tags: ["Cretaceous", "Carnivore"], size: 0.8,
+          fact: "A tiny dinosaur with four wings, feathers on both arms and legs.",
+          stats: "120 million years ago · China · ~1 kg",
+          extra: ["Its feathers were iridescent black, like a crow.", "Fossils show it ate fish, lizards, birds, and mammals.", "It probably glided between trees."] },
+        { name: "Therizinosaurus", icon: "✂️", meaning: "Scythe lizard", tags: ["Cretaceous", "Herbivore"], size: 10,
+          fact: "Had the longest claws of any known animal, up to about 1 m long, but probably ate plants.",
+          stats: "70 million years ago · Mongolia · ~5 tonnes",
+          extra: ["When first found, scientists thought it was a giant turtle.", "Its claws were likely used to pull down branches.", "It had a pot belly for digesting plants."] },
+        { name: "Carnotaurus", icon: "🐂", meaning: "Meat-eating bull", tags: ["Cretaceous", "Carnivore"], size: 8,
+          fact: "Had bull-like horns over its eyes and arms even tinier than T. rex's.",
+          stats: "72–69 million years ago · Argentina · ~1.5 tonnes",
+          extra: ["Skin impressions show it was covered in bumpy scales.", "It was built for speed and may have been one of the fastest big theropods.", "Its forearms were so small they were basically stubs."] },
+        { name: "Giganotosaurus", icon: "🦷", meaning: "Giant southern lizard", tags: ["Cretaceous", "Carnivore"], size: 12.5,
+          fact: "A rival to T. rex in size, but lived about 30 million years earlier in South America.",
+          stats: "99–97 million years ago · Argentina · ~6–8 tonnes",
+          extra: ["Its teeth were blade-like for slicing, not crushing.", "It may have hunted giant sauropods.", "Its skull was longer than T. rex's but lighter."] },
+        { name: "Dilophosaurus", icon: "🎭", meaning: "Two-crested lizard", tags: ["Jurassic", "Carnivore"], size: 7,
+          fact: "Had two thin crests on its head. No evidence it spit venom or had a neck frill!",
+          stats: "193 million years ago · Arizona · ~400 kg",
+          extra: ["It was much bigger than its Jurassic Park version.", "Its crests were probably for display.", "It's one of the earliest large predatory dinosaurs."] },
+        { name: "Compsognathus", icon: "🦎", meaning: "Pretty jaw", tags: ["Jurassic", "Carnivore"], size: 1,
+          fact: "About the size of a chicken, it was once thought to be the smallest dinosaur.",
+          stats: "150 million years ago · Germany & France · ~3 kg",
+          extra: ["One fossil has a lizard in its stomach, its last meal.", "It was a speedy hunter of small animals.", "It lived alongside Archaeopteryx."] },
+        { name: "Oviraptor", icon: "🥚", meaning: "Egg thief", tags: ["Cretaceous", "Omnivore"], size: 1.6,
+          fact: "Named 'egg thief' by mistake. It was actually protecting its own eggs!",
+          stats: "75 million years ago · Mongolia · ~35 kg",
+          extra: ["Relatives were found fossilized sitting on nests like birds.", "It had a toothless beak.", "It may have eaten shellfish, eggs, and plants."] },
+        { name: "Herrerasaurus", icon: "🌋", meaning: "Herrera's lizard", tags: ["Triassic", "Carnivore"], size: 6,
+          fact: "One of the earliest known dinosaurs, prowling about 231 million years ago.",
+          stats: "231 million years ago · Argentina · ~250 kg",
+          extra: ["It's named after the goat herder who found it, Victorino Herrera.", "It had a flexible lower jaw for gripping prey.", "Dinos were still a minority group when it lived."] },
+        { name: "Coelophysis", icon: "⚡", meaning: "Hollow form", tags: ["Triassic", "Carnivore"], size: 3,
+          fact: "A slender, speedy hunter. Hundreds were found together at Ghost Ranch, New Mexico.",
+          stats: "216–203 million years ago · North America · ~20 kg",
+          extra: ["A Coelophysis skull went to space aboard the shuttle Endeavour in 1998.", "It's the state fossil of New Mexico.", "It had hollow bones like birds."] },
+        { name: "Plateosaurus", icon: "🌲", meaning: "Flat lizard", tags: ["Triassic", "Herbivore"], size: 8,
+          fact: "One of the first big plant-eaters, an early relative of the giant sauropods.",
+          stats: "214–204 million years ago · Europe · ~4 tonnes",
+          extra: ["Over 100 skeletons have been found, many stuck in mud.", "It walked on two legs, not four.", "It had grasping hands with big thumb claws."] },
+      ],
+      quiz: [
+        { q: "Which living animals are actually dinosaurs?", options: ["Crocodiles", "Birds", "Lizards", "Turtles"], answer: 1, why: "Birds evolved from small feathered theropods." },
+        { q: "How big was the real Velociraptor?", options: ["Bus-sized", "Horse-sized", "Turkey-sized", "Mouse-sized"], answer: 2, why: "About 2 m long including its tail, and feathered." },
+        { q: "What does 'dinosaur' mean?", options: ["Terrible lizard", "Ancient beast", "Giant reptile", "Thunder lizard"], answer: 0, why: "From Greek 'deinos' (terrible) and 'sauros' (lizard)." },
+        { q: "Which lived closer in time to humans?", options: ["Stegosaurus", "T. rex", "They lived at the same time", "Neither, they're equal"], answer: 1, why: "T. rex lived ~66 Mya; Stegosaurus ~150 Mya." },
+        { q: "What wiped out the non-bird dinosaurs?", options: ["An ice age", "A giant asteroid", "Cavemen", "A plague"], answer: 1, why: "The Chicxulub impact 66 million years ago." },
+        { q: "Which dinosaur had a trombone-like crest?", options: ["Triceratops", "Parasaurolophus", "Ankylosaurus", "Diplodocus"], answer: 1, why: "Air flowed through hollow tubes in its crest." },
+        { q: "Pterodactyls were…", options: ["Flying dinosaurs", "Early birds", "Flying reptiles, not dinosaurs", "Giant bats"], answer: 2, why: "Pterosaurs were close cousins of dinosaurs." },
+        { q: "Which dino had the longest claws of any known animal?", options: ["T. rex", "Therizinosaurus", "Velociraptor", "Iguanodon"], answer: 1, why: "Its claws were up to about 1 m long." },
+      ],
+      quizPerfect: "🦖 ROAR! A perfect paleontologist!",
+      quizDone: "Not bad! Hit play again to beat your score.",
+    };
+  </script>
+  <script src="site.js"></script>
+</body>
+</html>
