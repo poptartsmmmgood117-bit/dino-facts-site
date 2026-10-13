@@ -4,42 +4,46 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dino Facts</title>
-  <meta name="description" content="Roar-some facts about dinosaurs and the prehistoric world." />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦖</text></svg>" />
+  <meta name="description" content="A field guide to the giants, killers and oddballs of the Mesozoic." />
+  <meta property="og:title" content="Dino Facts" />
+  <meta property="og:description" content="A field guide to the giants, killers and oddballs of the Mesozoic." />
+  <meta name="theme-color" content="#0a0a0a" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230a0a0a'/><text x='50' y='74' font-size='70' font-family='Impact' text-anchor='middle' fill='%23e4572e'>D</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="dino">
   <nav class="nav">
-    <a class="brand" href="index.html">🦖 Dino Facts</a>
+    <a class="brand" href="./">Dino<span>.</span>Facts</a>
     <div class="links">
-      <a href="index.html" class="active">Dinos</a>
+      <a href="./" class="active">Dinos</a>
       <a href="https://poptartsmmmgood117-bit.github.io/viking-facts-site/">Vikings</a>
+      <a href="https://poptartsmmmgood117-bit.github.io/roman-facts-site/">Romans</a>
     </div>
   </nav>
 
   <header class="hero">
-    <div class="floaters" aria-hidden="true"></div>
-    <div>
-      <div class="big-emoji" aria-hidden="true">🦖</div>
-      <h1>DINO FACTS</h1>
-      <p class="tagline">165 million years of giants, weirdos, and feathered terrors. Meet <span id="item-count">24</span> of the coolest creatures to ever stomp the Earth.</p>
+    <div class="ghost-word" aria-hidden="true">Tyrannosaurus</div>
+    <div class="inner">
+      <p class="kicker">Field Guide · 252–66 million years ago</p>
+      <h1>Apex<br><em>Predators</em></h1>
+      <p class="tagline">165 million years of giants, killers and evolutionary oddballs. <span id="item-count">24</span> species. No feathers spared.</p>
       <div class="ctas">
-        <a class="btn" href="#dinos">Meet the dinos</a>
-        <a class="btn ghost" href="#quiz-section">Take the quiz</a>
+        <a class="btn" href="#dinos">Enter the Mesozoic</a>
+        <a class="btn ghost" href="#quiz-section">Take the test</a>
       </div>
     </div>
   </header>
 
   <section class="alt">
     <div class="wrap reveal">
-      <h2 class="section-title">⚡ Random Fact Generator</h2>
-      <p class="section-sub">Hit the button for a new fact. Some of them will surprise you.</p>
+      <p class="kicker">01 · Dispatch</p>
+      <h2 class="section-title">Random Fact</h2>
       <div class="fact-box">
         <p id="fact-text" aria-live="polite"></p>
-        <button class="btn" id="fact-btn">🦴 Give me another!</button>
+        <button class="btn" id="fact-btn">Next fact</button>
       </div>
     </div>
   </section>
@@ -47,20 +51,21 @@
   <section>
     <div class="wrap reveal">
       <div class="stats">
-        <div class="stat"><div class="num">1,500+</div><div class="lbl">named dinosaur species</div></div>
-        <div class="stat"><div class="num">165M</div><div class="lbl">years dinos ruled</div></div>
-        <div class="stat"><div class="num">~35 m</div><div class="lbl">longest dino (nose to tail)</div></div>
-        <div class="stat"><div class="num">10,000+</div><div class="lbl">living dino species (birds!)</div></div>
+        <div class="stat"><div class="num">1,500+</div><div class="lbl">Named species</div></div>
+        <div class="stat"><div class="num">165M</div><div class="lbl">Years in charge</div></div>
+        <div class="stat"><div class="num">~35 m</div><div class="lbl">Longest on record</div></div>
+        <div class="stat"><div class="num">10,000+</div><div class="lbl">Still alive (birds)</div></div>
       </div>
     </div>
   </section>
 
   <section class="alt" id="dinos">
     <div class="wrap">
-      <h2 class="section-title">🦕 The Dino Lineup</h2>
-      <p class="section-sub">Search, filter by era or diet, and tap any card for extra facts. The bar shows length compared to the biggest dino here.</p>
+      <p class="kicker">02 · The Roster</p>
+      <h2 class="section-title">The Lineup</h2>
+      <p class="section-sub">Search, filter by period or diet, and open any entry for the full file. The bar shows body length against the biggest animal here.</p>
       <div class="controls" id="controls">
-        <input id="search" type="search" placeholder="Search dinos…" aria-label="Search dinosaurs" />
+        <input id="search" type="search" placeholder="Search species…" aria-label="Search dinosaurs" />
       </div>
       <div class="grid" id="grid"></div>
     </div>
@@ -68,54 +73,73 @@
 
   <section>
     <div class="wrap">
-      <h2 class="section-title">🕰️ Journey Through Deep Time</h2>
-      <p class="section-sub">The age of dinosaurs is split into three periods together called the Mesozoic Era.</p>
+      <p class="kicker">03 · Deep Time</p>
+      <h2 class="section-title">The Mesozoic</h2>
+      <p class="section-sub">Three periods. One supercontinent breaking apart. One very bad afternoon at the end.</p>
       <div class="timeline">
-        <div class="tl-item reveal"><h3>Triassic</h3><div class="when">252 – 201 million years ago</div><p>Life recovers from the worst mass extinction ever. The first dinosaurs appear around 230 million years ago, and most of them are small, speedy two-legged hunters. All land is joined in one supercontinent, Pangaea.</p></div>
-        <div class="tl-item reveal"><h3>Jurassic</h3><div class="when">201 – 145 million years ago</div><p>Pangaea starts splitting up. Giant long-necked sauropods like Brachiosaurus and Diplodocus spread everywhere, Stegosaurus and Allosaurus appear, and the first bird, Archaeopteryx, takes off.</p></div>
-        <div class="tl-item reveal"><h3>Cretaceous</h3><div class="when">145 – 66 million years ago</div><p>The heyday of dinosaurs: T. rex, Triceratops, Velociraptor, Spinosaurus, and armored ankylosaurs. Flowering plants appear and bees arrive along with them.</p></div>
-        <div class="tl-item reveal"><h3>💥 The Impact</h3><div class="when">66 million years ago</div><p>An asteroid roughly 10 km wide slams into what is now Chicxulub, Mexico. About three quarters of all species are wiped out, including every non-bird dinosaur.</p></div>
-        <div class="tl-item reveal"><h3>🐦 Today</h3><div class="when">Right now</div><p>Dinosaurs never fully left. Birds are living theropod dinosaurs, which makes the chicken in your sandwich a distant cousin of T. rex.</p></div>
+        <div class="tl-item reveal"><div class="when">252 – 201 million years ago</div><h3>Triassic</h3><p>Life claws back from the worst mass extinction in Earth's history. The first dinosaurs appear around 230 million years ago: small, fast, two-legged hunters on a single supercontinent, Pangaea.</p></div>
+        <div class="tl-item reveal"><div class="when">201 – 145 million years ago</div><h3>Jurassic</h3><p>Pangaea tears apart. Sauropods like Brachiosaurus and Diplodocus grow to staggering sizes, Allosaurus rules as top predator, and Archaeopteryx takes to the air.</p></div>
+        <div class="tl-item reveal"><div class="when">145 – 66 million years ago</div><h3>Cretaceous</h3><p>The golden age: T. rex, Triceratops, Spinosaurus, Velociraptor and the armored ankylosaurs. Flowering plants spread across the planet.</p></div>
+        <div class="tl-item reveal"><div class="when">66 million years ago</div><h3>Impact</h3><p>A rock about 10 km wide hits what is now Chicxulub, Mexico. Around three quarters of all species die, including every dinosaur that couldn't fly.</p></div>
+        <div class="tl-item reveal"><div class="when">Today</div><h3>Survivors</h3><p>Birds are living theropod dinosaurs. The line never ended. It just got smaller and learned to sing.</p></div>
       </div>
     </div>
   </section>
 
   <section class="alt">
     <div class="wrap">
-      <h2 class="section-title">🙅 Myth vs. Fact</h2>
-      <p class="section-sub">Movies got a lot of things wrong. Here's what scientists actually think.</p>
+      <p class="kicker">04 · Corrections</p>
+      <h2 class="section-title">Myth vs. Fact</h2>
+      <p class="section-sub">Hollywood got a lot wrong. Here's what the fossils say.</p>
       <div class="myths">
-        <div class="myth reveal"><div class="label m">Myth</div><p>Velociraptors were human-sized.</p><div class="label f">Fact</div><p>Real Velociraptor was about the size of a turkey and covered in feathers. The movie "raptors" are closer to Deinonychus.</p></div>
-        <div class="myth reveal"><div class="label m">Myth</div><p>Pterodactyls and plesiosaurs were dinosaurs.</p><div class="label f">Fact</div><p>Flying pterosaurs and swimming plesiosaurs and mosasaurs were reptile cousins of dinosaurs, not dinosaurs themselves.</p></div>
-        <div class="myth reveal"><div class="label m">Myth</div><p>Dinosaurs and humans lived together.</p><div class="label f">Fact</div><p>The last non-bird dinosaurs died about 66 million years before the first humans showed up.</p></div>
-        <div class="myth reveal"><div class="label m">Myth</div><p>T. rex could only see you if you moved.</p><div class="label f">Fact</div><p>T. rex had forward-facing eyes and probably better depth perception than a hawk. Standing still wouldn't save you.</p></div>
-        <div class="myth reveal"><div class="label m">Myth</div><p>Dinosaurs were all slow, scaly, and dumb.</p><div class="label f">Fact</div><p>Many were active, warm-blooded, feathered, and clever. Troodon had one of the biggest brains for its body size.</p></div>
-        <div class="myth reveal"><div class="label m">Myth</div><p>Dinosaurs are completely extinct.</p><div class="label f">Fact</div><p>Birds are dinosaurs. There are more living dinosaur species today than there are species of mammals.</p></div>
+        <div class="myth reveal"><div class="label m">Myth</div><p>Velociraptors were human-sized.</p><div class="label f">Fact</div><p>The real Velociraptor was turkey-sized and feathered. The movie "raptors" are closer to Deinonychus.</p></div>
+        <div class="myth reveal"><div class="label m">Myth</div><p>Pterodactyls and plesiosaurs were dinosaurs.</p><div class="label f">Fact</div><p>Pterosaurs, plesiosaurs and mosasaurs were reptile cousins of the dinosaurs, not dinosaurs themselves.</p></div>
+        <div class="myth reveal"><div class="label m">Myth</div><p>Dinosaurs and humans lived together.</p><div class="label f">Fact</div><p>About 66 million years separate the last non-bird dinosaurs from the first humans.</p></div>
+        <div class="myth reveal"><div class="label m">Myth</div><p>T. rex couldn't see you if you stood still.</p><div class="label f">Fact</div><p>Forward-facing eyes and depth perception possibly better than a hawk's. Standing still would not save you.</p></div>
+        <div class="myth reveal"><div class="label m">Myth</div><p>Dinosaurs were slow, scaly and dumb.</p><div class="label f">Fact</div><p>Many were active, warm-blooded and feathered. Troodon had one of the largest brains for its body size.</p></div>
+        <div class="myth reveal"><div class="label m">Myth</div><p>Dinosaurs are extinct.</p><div class="label f">Fact</div><p>Birds are dinosaurs, and there are more living dinosaur species today than species of mammals.</p></div>
       </div>
     </div>
   </section>
 
   <section id="quiz-section">
     <div class="wrap">
-      <h2 class="section-title">🧠 Dino Quiz</h2>
-      <p class="section-sub">How much do you really know? Test yourself.</p>
+      <p class="kicker">05 · Examination</p>
+      <h2 class="section-title">The Test</h2>
+      <p class="section-sub">Eight questions. No mercy.</p>
       <div class="quiz reveal" id="quiz"></div>
     </div>
   </section>
 
   <section class="alt">
-    <div class="promo reveal">
-      <div>
-        <h3>⚔️ Ready for a different kind of giant?</h3>
-        <p>Trade claws for longships. Check out our brand-new Viking Facts page: raiders, explorers, gods, and runes.</p>
+    <div class="wrap">
+      <div class="promo reveal">
+        <div>
+          <p class="kicker">Next expedition</p>
+          <h3>Longships &amp; Runes</h3>
+          <p>Trade claws for axes. Raiders, explorers and Norse gods, plus a rune translator for your name.</p>
+        </div>
+        <a class="btn" href="https://poptartsmmmgood117-bit.github.io/viking-facts-site/">Vikings →</a>
       </div>
-      <a class="btn" href="https://poptartsmmmgood117-bit.github.io/viking-facts-site/">Sail to Vikings →</a>
+      <div class="promo reveal">
+        <div>
+          <p class="kicker">Next expedition</p>
+          <h3>Legions &amp; Empire</h3>
+          <p>Emperors, gladiators and the engineers who built roads that still exist, plus a Roman numeral converter.</p>
+        </div>
+        <a class="btn" href="https://poptartsmmmgood117-bit.github.io/roman-facts-site/">Romans →</a>
+      </div>
     </div>
   </section>
 
-  <footer>Made with 🦴 and a lot of roaring · <a href="https://poptartsmmmgood117-bit.github.io/viking-facts-site/">Viking Facts</a></footer>
+  <footer>
+    <div class="wrap">
+      <span>Dino Facts · Mesozoic field guide</span>
+      <span><a href="https://poptartsmmmgood117-bit.github.io/viking-facts-site/">Vikings</a><a href="https://poptartsmmmgood117-bit.github.io/roman-facts-site/">Romans</a></span>
+    </div>
+  </footer>
 
-  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Dinosaur details">
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Species details">
     <div class="panel">
       <button class="close" aria-label="Close">✕</button>
       <div id="modal-body"></div>
@@ -124,11 +148,10 @@
 
   <script>
     window.PAGE = {
-      floaters: ["🦖", "🦕", "🦴", "🥚", "🌋", "🌿"],
-      emptyText: "No dinos found. Maybe they went extinct? 🦴",
-      sizeLabel: (d) => `Length: ~${d.size} m`,
+      emptyText: "Nothing matches. Extinct, apparently.",
+      sizeLabel: (d) => `Length ~${d.size} m`,
       filterGroups: [
-        { name: "Eras", values: ["Triassic", "Jurassic", "Cretaceous"] },
+        { name: "Periods", values: ["Triassic", "Jurassic", "Cretaceous"] },
         { name: "Diets", values: ["Carnivore", "Herbivore", "Omnivore", "Piscivore"] },
       ],
       facts: [
@@ -258,8 +281,8 @@
         { q: "Pterodactyls were…", options: ["Flying dinosaurs", "Early birds", "Flying reptiles, not dinosaurs", "Giant bats"], answer: 2, why: "Pterosaurs were close cousins of dinosaurs." },
         { q: "Which dino had the longest claws of any known animal?", options: ["T. rex", "Therizinosaurus", "Velociraptor", "Iguanodon"], answer: 1, why: "Its claws were up to about 1 m long." },
       ],
-      quizPerfect: "🦖 ROAR! A perfect paleontologist!",
-      quizDone: "Not bad! Hit play again to beat your score.",
+      quizPerfect: "Flawless. Apex paleontologist.",
+      quizDone: "Survivable. Run it again.",
     };
   </script>
   <script src="site.js"></script>
